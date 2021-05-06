@@ -1,0 +1,10 @@
+p {
+    padding: 0 50px;
+    text-justify: inter-word;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

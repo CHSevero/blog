@@ -1,0 +1,186 @@
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* fonts end */
+
+/* Posts */
+
+
+.section-posts h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.posts {
+    padding: 0 50px;
+    border: 5px solid coral;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    border-radius: 20px;
+}
+
+.posts .post {
+    text-align: justify;
+    text-justify: inter-word;
+    border-bottom: 5px solid coral;
+    position: relative;
+}
+
+.posts .post:last-of-type {
+    margin-bottom: 20px;
+}
+
+.posts .post a { 
+    color: black;
+    font-size: 25px;
+    
+}
+.posts .post a h3 {
+    padding: 10px;
+}
+
+.posts .post a h3:hover,
+.posts .post a h3:focus,
+.posts .post a h3:active {
+    background: coral;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+
+.tags span {
+    padding: 5px 10px;
+    background: coral;
+    margin-right: 5px;
+    margin-top: 5px;
+    border-radius: 15px;
+    
+}
+
+.older-newer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.older-posts {
+    align-self: flex-start;  
+}
+
+.older-posts::before {
+    content: "<< ";
+}
+
+.newer-posts {
+    align-self: flex-end;
+    
+}
+
+.newer-posts::after {
+    content: " >>";
+}
+
+.newer-posts,
+.older-posts {
+    background: coral;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    border-color: coral;
+    color: black;
+    font-weight: bold;
+}
+
+/* Posts end */
+
+
+
+/* Search */
+.section-search {
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+    border: 3px solid coral;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0 20px;
+}
+
+.section-search form {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.section-search form label {
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+
+.section-search form p {
+    width: 100%;
+}
+
+.section-search form input {
+    font-size: 25px;
+    width: calc(100% - 79px);
+    height: 30px;
+    border-color: coral;
+    border-radius: 10px;
+}
+
+
+
+.section-search form button {
+    font-family: 'Great Vibes', cursive;
+    font-weight: bolder;
+    font-size: 20px;
+    padding-top: 3px;
+    padding-left: 5px;
+    padding-right: 10px;
+    background: coral;
+    border-color: coral;
+    border-radius: 5px;
+}
+/*Search end */
+
+
+
+/* Media Query Start */
+
+@media (max-width: 500px) {
+    .section-posts h2 {
+        font-size: 30px;
+    }
+
+    .posts .post a { 
+        font-size: 20px;
+        
+    }
+
+    .posts {
+        padding: 0 20px;
+    }
+
+    .section-search {
+        margin: 0;
+    }
+    
+    
+    .section-search form label {
+        font-size: 25px;
+    }
+    
+    .section-search form input {
+        height: 25px;
+    }
+    
+
+}
+
+

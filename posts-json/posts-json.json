@@ -1,0 +1,123 @@
+{
+    "posts": [
+        {
+            "name": "How I made this blog",
+            "text": "In this post, I teach you how I made this blog using HTML, CSS, and JavaScript. I hope you learn something and have fun.",
+            "date": "04-26-2021",
+            "tags": ["html", "css", "javascript", "blog"],
+            "post_url": "/posts/how-I-made-this-blog.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet,",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        }      
+    ]
+}

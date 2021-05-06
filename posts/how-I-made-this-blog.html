@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="pagename" content="home">
+    <title>Severus Blog</title>
+    <link rel="stylesheet" href="../css/General-style.css">
+    <link rel="stylesheet" href="../css/post-page.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/atelier-cave-dark.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.7.2/build/highlight.min.js" defer></script>
+    <script src="../javascript/postPage.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Severus Blog</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html" class="home">Home</a></li>
+            <li><a href="/html/about.html" class="about">About</a></li>
+            <li><a href="/html/donate.html" class="donate">Donate</a></li>
+        </ul>
+    </nav>
+    <main>
+        <article class="article">
+            <h2>How I made this blog</h2>
+            <section class="section">
+                <h3>The blog structure</h3>
+                <p>This blog is a 4 pages site: home, about, donate, and post page. All the pages are composed of three sections a header, main section, and footer. All pages have the same header and footer. The only different thing is the main section.</p>
+                
+                <p>Another thing to notice is that this blog only uses HTML, CSS, and JavaScript.</p>
+            </section>
+
+            <section class="section">
+                <h3>Folder structure</h3>
+                <p>So let’s start to build our blog. First of all, make the blog’s folder structure. Start by making a folder called blog, this is our main folder. Inside the blog folder create the following folders: css for CSS files, html for HTML files, javascript for JavaScript files, images for images files, posts for HTML files that are post pages, posts-json for json files, and iframes folder for iframes.</p>
+            </section>
+
+            <section class="section">
+                <h3>Home page</h3>
+                <p>Now let’s create our home page. Start by creating the index.html file inside the blog folder. Inside the index.html file create the basic HTML page structure.</p>
+                <pre>
+                    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code>
+                </pre>
+
+                <p>Now let´s create our header and navigation menu.</p>
+                <pre>
+                    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Severus Blog&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;!--Header and navegation menu--&gt;
+        &lt;header&gt;
+            &lt;h1&gt;Severus Blog&lt;/h1&gt;
+        &lt;/header&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#" class="home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="about"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="donate"&gt;Donate&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;!--Header and navegation menu--&gt;
+  
+&lt;/body&gt;
+&lt;/html&gt; 
+                    </code>
+                </pre>
+
+                <p>First of all,  we change the page title from “Document” to “Severus Blog”, the tag &lt;title&gt; is inside the tag &lt;head&gt;.</p>
+                <p>Inside the &lt;body&gt; tag, we create a &lt;header&gt tag, and inside it, we create a &lt;h1&gt; tag with this text content “Severus Blog”.</p>
+                <p>Below the header tag, create a nav tag, inside it create an &lt;u&gt; tag with 3 &lt;li&gt; tags. Each &lt;li&gt; tag has an &lt;a&gt;  tag has a href whit a  page URL, and a class that we will use later on.</p>
+
+                <p>Now we have our header and a navigation menu. Let’s take a look at our page.</p>
+                <iframe src="../iframes/post01/frame01/index.html" frameborder="0"></iframe>
+
+                <p>Our page doesn’t look very good, now is the time we introduce some CSS to make our page good-looking. So inside the css folder create a file called General-style.css and in the &lt;head&gt;, inside the index.html file, create a &lt;link&gt; to link the General-style.css to the index.html.</p>
+                <pre>
+                    <code>
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Severus Blog&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/General-style.css"&gt;
+&lt;/head&gt;
+                    </code>
+                </pre>
+
+                <p>With this &lt;link&gt; we are telling the browser that we have a style sheet at this location “../css/General-stle.css”. Now let’s make some styling to our page, open the General-style.css file and add the following CSS inside it. </p>
+ 
+                <pre>
+                    <code>
+ /*import font from google*/
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* General Start */
+html {
+    font-family: sans-serif; /* */
+}
+
+body {
+    width: 95%; /* set body width*/
+    
+    margin: 0 auto; /*set body margin, top and bottom marging to 0 and the left and right to auto. */
+    position: relative; /*Change the position of the body to relative, so we can move it. */
+    top: -20; /*change the top-position of the body to -20 , so it merge with bowser top margin.*/
+}
+/* General End */
+                    </code>
+                </pre>
+
+                <p>The text between /* and */ are CSS comments and explain what is happening in each step. In this part, we made some changes in the general page style. Let’s take a look at the page.
+                </p>
+                <iframe src="../iframes/post01/frame02/index.html" frameborder="0"></iframe>
+
+                <p>So it doesn’t look a lot better. Let’s add some CSS to &lt;header&gt; tag now.</p>
+
+                <pre>
+                    <code>
+/* Header Start */
+header {
+    background-color: coral; /* Change the background color to the coral color. */
+    text-align: center; /* Aling the &ltheader&gt text on the conteiner center. */
+    height: 100px; /* Set the &ltheader&gt height to 100px. */
+    position: relative; /* Change the position type to relative, so it can be moved. */
+    top: -20px; /* Move the &ltheader&gt conteiner. */
+    padding-top: 5px; /* Add 5px worth of space between the content and the boder. */
+    border-radius: 10px; /* Round the border on 10px */
+}
+header h1 {
+    font-family: 'Great Vibes', cursive; /* Change the font type*/
+    font-size: 40px; /*Set the font-size */
+}
+/* Header End */
+
+                    </code>
+                </pre>
+
+                <p>Here we made some changes to the &lt; header&gt; and to the &lt;h1&gt;. Now our page looks like this: 
+                </p>
+                <iframe src="../iframes/post01/frame03/index.html" frameborder="0"></iframe>
+
+                <p>Our &lt;header&gt; looks a lot better. Now let’s change our navigation menu. </p>
+
+                <pre>
+                    <code>
+/* Navegation menu Start */
+nav {
+    position: relative; /* change the position type so it can be moved. */
+    top: -60px; /* change the position of the nav tag. */
+    width: 50%; /* set the nav's width to be 50% of it's parent. */
+    margin: 0 auto; /* set the top and bottom margins to 0 and right and left to auto. */
+}
+                    </code>
+                </pre>
+
+                <p>We change the &lt;nav&gt; position, width, and margins. Let’s take a look at the result:</p>
+                <iframe src="../iframes/post01/frame04/index.html" frameborder="0"></iframe>
+
+                <p>Our navigation menu doesn’t look very good, so let’s continue our CSS work.</p>
+
+                <pre>
+                    <code>
+nav ul {
+    list-style: none; /* Remove the default list style. */ 
+    display: flex; /* Change the display to flex. */ 
+    align-items: center; /* Align the &lt;li&gt;s on the center of the &lt;ul&gt; container. */ 
+    justify-content: space-evenly; /* Set space between the &lt;li&gt;s to be equally distributed. */
+}  
+                    </code>
+                </pre>
+
+                <p>Here we made some changes to the unordered list inside the &lt;nav&gt;. Now our page looks like this:</p>
+                <iframe src="../iframes/post01/frame05/index.html" frameborder="0"></iframe>
+
+                <p>Our navigation menu looks a lot better, but let's add some more CSS.</p>
+                <pre>
+                    <code>
+nav ul li a { /* Here we going to make some changes to the anchor tag <a>. */
+    text-decoration: none; /* Remove the link text decoration. */
+    color: black; /* Set the link color to black. */
+    font-size: 20px; /* Set the link’s text font-size to 20px. */
+    background-color: rgba(173, 44, 44, 0.3); /* Set the link background color. */
+    padding: 2px; /* Set 2 pixels of space between the link border and its content. */
+    border-radius: 5px; /* 5 pixels rounded border. */
+}
+                    </code>
+                </pre>
+
+                <p>Here we made some changes to the &lt;a&gt;. Let’s have a look:</p>
+                <iframe src="../iframes/post01/frame06/index.html" frameborder="0"></iframe>
+
+                <p>Let’s add some CSS to our link when it’s focused or hovered.</p>
+                <pre>
+                    <code>
+nav ul li a:hover,
+nav ul li a:focus { /* Add some CSS when the link is hovered or focused. */
+    background-color: rgba(228, 4, 4, 1);  /* Change the background color. */
+    
+}
+
+
+nav ul li a:focus {  /* Add some CSS when the link is focused. */
+    outline: none; /* Remove the outlining. */
+}
+                    </code>
+                </pre>
+
+                <p>Let's have a look:</p>
+                <iframe src="../iframes/post01/frame07/index.html" frameborder="0"></iframe>
+
+                <p>You can see that the link has a different background color when focused or hovered.</p>
+                <p>So we have finished our header and navigation menu. Now let’s give our page a footer. Inside the index.html file make the following changes.</p>
+  
+                <pre>
+                    <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Severus Blog&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/General-style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!--Header and navegation menu--&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Severus Blog&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#" class="home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/html/about.html" class="about"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="/html/donate.html" class="donate"&gt;Donate&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;!--Header and navegation menu--&gt;
+
+    &lt;!-- footer --&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2021 Carlos Henrique Severo. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+    &lt;!-- footer --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code>
+                </pre>
+
+                <p>You can see that after the &lt;nav&gt; we add our footer. It’s only &lt;footer&gt; tag and &lt;p&gt; tag with the copyrights information. Let’s take a look at the page:</p>
+                <iframe src="../iframes/post01/frame08/index.html" frameborder="0"></iframe>
+
+                <p>Now we have a footer, but it’s doesn’t look very good. So let’s add some CSS to it. Inside the General-style.css at the end of it add the following css code.</p>
+
+                <pre>
+                    <code>
+/* footer Start */
+footer {
+    background-color: coral; /* Change the background color. */
+    text-align: center; /* Aling the text to the center. */
+    height: 30px; /* Set the height. */
+    padding: 10px; /* Set the space between the border and footer content. */ 
+    font-size: 15px; /* Set the font size */
+    margin-top: 20px; /* Set the top margin. */
+    margin-bottom: 4px; /* Set the bottom margin. */
+    border-radius: 20px; /* Rounded the border corners.*/
+}
+/* footer End */
+                    </code>
+                </pre>
+
+                <p>Let's take a look at the result:</p>
+                <iframe src="../iframes/post01/frame09/index.html" frameborder="0"></iframe>
+
+                <p>We finished the page footer, now is time to make the main content of the home page. The main content of our page will be a search box to search posts by tags and a display area to display the list of posts. Inside the index.html file, between the navigation menu and the footer  put the following HTML:</p>
+                <pre>
+                    <code>
+&lt;!-- Main section--&gt;
+&lt;main&gt;
+    &lt;!-- Search box --&gt;
+    &lt;section class="section-search"&gt;
+        &lt;form&gt;
+            &lt;label for="search"&gt;Search By Tags:&lt;/label&gt;
+            &lt;p&gt;
+                &lt;input type="text" id="search" name="search" required&gt;
+                &lt;button type="submit"&gt;Search&lt;/button&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    &lt;/section&gt;
+    &lt;!-- Search box --&gt;
+
+    &lt;!-- Post area --&gt;
+    &lt;section class="section-posts"&gt;
+        &lt;h2&gt;Posts&lt;/h2&gt;
+        &lt;div class="posts"&gt;
+        
+        &lt;/div&gt;
+       
+    &lt;/section&gt;
+    &lt;!-- Post area --&gt;
+    
+&lt;/main&gt;
+&lt;!-- Main section--&gt;
+                    </code>
+                </pre>
+
+                <p>Our search box is a &lt;section&gt;, inside the &lt;section&gt; we have a &lt;form&gt; and inside the form we have a &lt;label&gt;, &lt;input&gt;, and &lt;button&gt;. This are the basic for a search box.</p>
+
+                <p>Now our post area is only a &lt;section&gt; and inside of it we have a &lt;h2&gt;, and a &lt;div&gt; here we going to put our posts using JavaScript. Let’s take a look at the page:</p>
+                <iframe src="../iframes/post01/frame10/index.html" frameborder="0"></iframe>
+
+                <p>Our main section doesn’t look good and we have to add some CSS to it. But first, let’s get our post list and display it inside the post area.</p>
+                <p>Inside of the posts-json folder create a file called posts-json.json and inside put something like the following example:</p>
+                <pre>
+                    <code>
+{
+    "posts": [
+        {
+            "name": "How I made this blog",
+            "text": "In this post, I teach you how I made this blog using HTML, CSS, and JavaScript. I hope you learn something and have fun.",
+            "date": "04-26-2021",
+            "tags": ["html", "css", "javascript", "blog"],
+            "post_url": "/posts/how-I-made-this-blog.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        },
+        {
+            "name": "post",
+            "text": "Lorem ipsum dolor sit amet,",
+            "date": "04-15-2021",
+            "tags": ["html", "css", "javascript"],
+            "post_url": "/posts/post1.html"
+        }      
+    ]
+}
+                    </code>
+                </pre>
+
+                <p>So we have a JSON file with a posts list. Each post has a “name” the post name, a “text” the post description, “date” the post date, “tags” a tags list, and a “post_url” the post URL. In my case, I made a file with 17 posts.</p>
+
+                <p>Now we have to use some JavaScript to display the posts inside the page. First, inside the javascript folder create a file called index.js. Go to index.html file and add the following changes to the &lt;head&gt;:</p>
+                <pre>
+                    <code>
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Severus Blog&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/General-style.css"&gt;
+    &lt;script src="javascript/index.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+                    </code>
+                </pre>
+                <p>Here we add a &lt;script&gt; tag at the &lt;head&gt; tag,  this tells the browser to run the JavaScript inside the script. We added a defer to the &lt;script&gt; so the page is loaded before we run the script. Now add the following code inside the index.js file.</p>
+
+                <pre>
+                    <code class="javascript">
+let numberPosts = 5; // Post’s number per page.
+let page = 0; // Actual page on the pagination.
+let posts_data_; // Posts list.
+
+// A function that ran after the HTML page is loaded.
+// All posts display will happen inside this function.
+window.addEventListener("load", function () {
+    
+});                   
+                    </code>
+                 </pre>
+
+                <p>Here we have 3 variables that we will talk about later on and a window.addEventListener with an event of load, this event is only triggered when the page is loaded. All of our JavaScript code related to display our post’s list will be put inside this window.addEventListener. So, let’s take a look a the page: </p>
+                <iframe src="../iframes/post01/frame11/index.html" frameborder="0"></iframe>
+
+                <p>We can see that nothing changed on the page, this happened because we didn’t anything to the page yet. Let’s add some more JavaScript to our index.js file inside of the window.addEventListener.</p>
+
+                <pre>
+                    <code>
+let numberPosts = 5; // Post’s number per page.
+let page = 0; // Actual page on the pagination.
+let posts_data_; // Posts list.
+
+// A function that ran after the HTML page is loaded.
+// All posts display will happen inside this function.
+window.addEventListener("load", function () {
+    
+    // Fetching data from the server using Fetch API.
+    // This function takes at least one parameter:
+    //      URL: The URL to the file you want to fetch.
+    // For more information see: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    fetch('../posts-json/posts-json.json') // Fetching the posts-json.json file. This return a promise.
+    .then(function(response){ // When the previous promise is fulfilled, run this block.
+        return response.json(); // Return the response in JSON format. This return a promise.
+    })
+    .then(function(json){ // When the previous promise is fulfilled, run this block.
+        posts_data_ = json['posts']; // Get posts data.
+        updatePosts(json['posts']); // Call updatePosts and pass the posts data as a parameter.
+    })
+    .catch(function(error){ // Catch any errors that occur.
+        console.log(error); // Log the error on the browser console.
+    });
+    
+});
+                    </code>
+                </pre>
+
+                <p>Here we are fetching the data from the server using FetchAPI, and then calling the updatePosts function. Let’s take a look at the page:</p>
+                <iframe src="../iframes/post01/frame12/index.html" frameborder="0"></iframe>
+
+                <p>Still, nothing has changed. This is the case because we didn’t make any changes to our page. Let’s implement our updatePosts function that will display the post on the page. On the index.js file at the end of the window.addEventListener add the following code:</p>
+
+                <pre>
+                    <code>
+    // update Posts section
+    // This function updates the posts in the posts section.
+    // This function takes one parameter:
+    //      posts_data: The posts' data
+    function updatePosts(posts_data) {
+        let posts = document.querySelector('.posts'); //Get div element with a class “.posts”, where we going to display the posts.
+        posts.innerHTML = ""; // Clear all HTML elements inside this element.
+
+        if(posts_data.length === 0){ // Check’s if the posts_data array is empty.
+            let nothing = document.createElement('p'); // Create a paragraph.
+            nothing.textContent = "Nothing found!"; // Set the paragraph’s text.
+            posts.appendChild(nothing); // Appended the paragraph to the posts’ div.
+            return // Return, so the updatePosts function execution is interrupted.
+        }
+
+        let start = page * numberPosts; // Pagination’s start index.
+        let end = start + numberPosts; // Pagination’s end index.
+        let slice_posts = posts_data.slice(start, end); // The posts’ slice to display on the current page.
+        for(let i=0; i&lt;slice_posts.length; i++) { // Iterate on the pagination slice over the posts.
+            let post = document.createElement('div'); // Create a div element.
+            post.classList.add('post'); // Add a class to it.
+
+            let h3 = document.createElement('h3'); // Create a h3 element.
+            h3.textContent = slice_posts[i]['name']; // Set its text as the post name.
+            let a = document.createElement('a'); // Create an a element.
+            a.href = slice_posts[i]['post_url']; // Set its ural as the post url.
+            a.appendChild(h3); // Append the h3 to the a element.
+            post.appendChild(a); // Append the a element to the post div.
+
+            let date = document.createElement('p'); // Create a p element.
+            date.textContent = "Date: "+ slice_posts[i]['date']; // Set its text content to the post's date.
+            post.appendChild(date); // Append the date(paragraph) to the post div.
+
+            let p = document.createElement('p'); // Create a paragraph element.
+            p.textContent = slice_posts[i]['text']; // Set p text as the post description
+            post.appendChild(p); // Append the p(paragrph) to the post div.
+
+            let tags = document.createElement('p'); // Create a paragraph element.
+            tags.classList.add("tags"); // Add a class "tags" to the tags(paragrapt) element.
+            for(let j=0; j&lt;slice_posts[i]['tags'].length; j++){ // Iterate over the tags list.
+                let span = document.createElement('span'); // Create a span element.
+                span.textContent = slice_posts[i]['tags'][j]; // Set span text.
+                tags.appendChild(span); // Append the span element to the tags(paragraph).
+            }
+            post.appendChild(tags); // Append the tags(paragraph) to the post div.
+
+            posts.appendChild(post); // Append the post div to the posts div.
+        }
+    }
+                    </code>
+                </pre>
+                <p>Here we updated the post section to display our posts’ list. We made pagination to show only  5 posts per page. Let’s take a look:</p>
+                <iframe src="../iframes/post01/frame13/index.html" frameborder="0"></iframe>
+
+                <p>So we can only display 5 posts per page, we will add buttons so we can navigate the pagination. Now let’s add some CSS to our post section. Create a file called index.css inside the css folder, inside the index.css file put the following CSS:</p>
+                <pre>
+                    <code>
+/* fonts */
+/* Import fonts from google fonts.*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* fonts end */
+
+/* Posts */
+
+
+.section-posts h2 { /* Styling post section header. */
+    font-family: 'Great Vibes', cursive; /* Set the font family. */
+    font-size: 40px; /* Set the font size. */
+    text-align: center; /* Aling text to the center */
+    margin-bottom: 0px; /* Set margin bottom. */
+}
+                    </code>
+                </pre>
+                
+                <p>Now link the index.css file in the &lt;head&gt; tag inside index.html file:</p>
+                <pre>
+                    <code>
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Severus Blog&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/General-style.css"&gt;
+    &lt;link rel="stylesheet" href="css/index.css"&gt;
+    &lt;script src="javascript/index.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;
+                    </code>
+                </pre>
+                
+                <p>Let’s take a look at the changes we made:</p>
+                <iframe src="../iframes/post01/frame14/index.html" frameborder="0"></iframe>
+                <p>Let’s continue to style our posts section, add the following CSS inside the index.css file:</p>
+
+                <pre>
+                    <code>
+.posts { /* Styling the post section. */
+    padding: 0 50px; /* Add some space between the content and the container border. */
+    border: 5px solid coral; /* Set a border. */
+    font-family: 'Roboto', sans-serif; /* Set the font-family. */
+    position: relative; /* Set position type to relative so it’s can be moved. */
+    border-radius: 20px; /* Rounded the borders’ corners. */
+}
+                    </code>
+                </pre>
+
+                <p>Let's have a look:</p>
+                <iframe src="../iframes/post01/frame15/index.html" frameborder="0"></iframe>
+
+                <p>Looking better, let’s add some more style. At the end of the index.css file add the following CSS:</p>
+                <pre>
+                    <code>
+.posts .post { /* Styling the post div. */
+    text-align: justify; /* Justify text. */
+    text-justify: inter-word; /* Justify text by change the distance between words. */
+    border-bottom: 5px solid coral; /* Set a border at the div’s bottom. */
+    position: relative; /* Set the position type as relative. */
+}
+
+.posts .post:last-of-type { /* Styling the last post div. */
+    margin-bottom: 20px; /* Set bottom margin. */ 
+}
+                    </code>
+                </pre>
+
+                <p>Let's take a look: </p>
+                <iframe src="../iframes/post01/frame16/index.html" frameborder="0"></iframe>
+
+                <p>Now we have a border between the post’s div. Now let’s style the post’s header and link. At the index.css file end add the following CSS:</p>
+                <pre>
+                    <code>
+.posts .post a { /* Styling the links. */
+    color: black; /* Set the link's color as black. */
+    font-size: 25px; /* Set the font size. */
+    
+}
+.posts .post a h3 { /* Styling the post’s div header. */
+    padding: 10px; /* Set a distance between the content and its container. */ 
+}
+
+.posts .post a h3:hover,
+.posts .post a h3:focus,
+.posts .post a h3:active { /* Styling the link when it’s hovered, focused, or active. */
+    background: coral; /* Set the background color. */ 
+}
+                    </code>
+                </pre>
+
+                <p>Let's take a look: </p>
+                <iframe src="../iframes/post01/frame17/index.html" frameborder="0"></iframe>
+
+                <p>Now our post’s header color is black and the links have a background when focused, hovered, or activated. Now let’s style our tags list, at the index.css file end add the following CSS:</p>
+
+                <pre>
+                    <code>
+.tags { /* Styling the tags list. */
+  display: flex; /* Set the display as flex. */
+  flex-direction: row-reverse; /* Display tags in a row and in reverse order. */
+  flex-wrap: wrap; /**/
+} 
+
+.tags span { /* Styling each tag inside the tags' list. */
+    padding: 5px 10px; /* Set space between the content and its container. */
+    background: coral; /* Set background color.*/
+    margin-right: 5px; /* Add a margin right. */
+    margin-top: 5px; /* Add a margin top. */
+    border-radius: 15px; /* Rounded the borders’ corners. */
+    
+}
+                    </code>
+                </pre>
+                <p>Let's have a look:</p>
+                <iframe src="../iframes/post01/frame18/index.html" frameborder="0"></iframe>
+
+                <p>Now our post section is looking nice. Let’s add buttons at the posts’ section end so we can go back and forth between posts’ pages. At the index.js file, at the updatePosts’  end adds the following JavaScript code.</p>
+
+                <pre>
+                    <code>
+let parabtns = document.createElement('p'); // Create a paragraph element.
+parabtns.classList.add('older-newer'); // Add the “older-newer” to the paragraph element.
+posts.appendChild(parabtns); // Append the paragraph to the posts section.
+
+// Handle older posts button
+if(posts_data.length &gt; end) { // Check if the post array’s length is greater than the last post index display on the pagination. If so, we display a button called “Older posts” to navigate to the older posts page.
+    let btnOlder = document.createElement('button'); // Create a button element.
+    btnOlder.classList.add('older-posts'); // Add the “older-post” class to the button’s classList.
+    btnOlder.textContent = 'Older posts'; // Set the button’s text to “Older posts”.
+    parabtns.appendChild(btnOlder); // Add the button to the paragraph.
+
+    btnOlder.addEventListener("click", function() { // Event Listener to handle when the button is clicked.
+        page++; // Increase the page number.
+        updatePosts(posts_data); // Update the post section.
+    });
+}
+        
+// Handle newer posts button
+if(start &gt; 0){ // Check if the start index is greater than 0. If so, we have newer posts to display.
+    let btnNewer = document.createElement('button'); // Create a button element.
+    btnNewer.classList.add('newer-posts'); // Add the “newer-post” class to the button’s classList.
+    btnNewer.textContent = 'Newer posts'; // Set the button’s text to “Newer posts”.
+    parabtns.appendChild(btnNewer); // Add the button to the paragraph.
+
+    btnNewer.addEventListener('click', function() { // Event Listener to handle when the button is clicked.
+        page--; // Decrease the page number.
+        updatePosts(posts_data); // Update the post section.
+    });
+
+}
+                    </code>
+                </pre>
+                <p>Let's have a look:</p>
+                <iframe src="../iframes/post01/frame19/index.html" frameborder="0"></iframe>
+                <p>Now we have our buttons to navigate between posts’ pages, but they don’t look so good. Let’s add some CSS to it. Inside the index.css file add the following CSS:</p>
+
+                <pre>
+                    <code>
+.older-newer { /* Styling the buttons paragraph. */
+    display: flex; /* Set the display to flex. */
+    flex-wrap: wrap; /**/
+    justify-content: space-between; /* Set the space between the buttons to be evenly distributed. */
+}
+
+.older-posts { /* Styling the older posts button. */
+    align-self: flex-start;   /* Display it a the container start. */
+}
+
+.older-posts::before { /* Styling the older posts button.*/
+    content: "&lt;&lt; "; /*Add "&lt;&lt;" before the bottun's content. */
+}
+
+.newer-posts { /* Styling the newer posts button. */
+    align-self: flex-end; /* Display it a the container's end. */
+    
+}
+
+.newer-posts::after { /* Styling the newer posts button.*/
+    content: " &gt;&gt;"; /* Add " &gt;&gt;" after the button's content.*/
+}
+
+.newer-posts,
+.older-posts { /* Styling buttons. */
+    background: coral; /* Set background color. */
+    font-size: 15px; /* Set font size.*/
+    padding: 5px; /* Set space between the border and its content. */
+    border-radius: 10px; /* Rounded borders. */
+    border-color: coral; /*Set border color. */
+    color: black; /* Set text color. */
+    font-weight: bold; /* Set font weight. */
+}
+
+/* Posts end */
+                    </code>
+                </pre>
+                <p>Let's have a look:</p>
+                <iframe src="../iframes/post01/frame20/index.html" frameborder="0"></iframe>
+            </section>
+        </article>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2021 Carlos Henrique Severo. All rights reserved.</p>
+    </footer>
+</body>
+</html>

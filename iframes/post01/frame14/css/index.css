@@ -1,0 +1,14 @@
+/* fonts */
+/* Import fonts from google fonts.*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* fonts end */
+
+/* Posts */
+
+
+.section-posts h2 { /* Styling post section header. */
+    font-family: 'Great Vibes', cursive; /* Set the font family. */
+    font-size: 40px; /* Set the font size. */
+    text-align: center; /* Aling text to the center */
+    margin-bottom: 0px; /* Set margin bottom. */
+}

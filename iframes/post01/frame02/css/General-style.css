@@ -1,0 +1,17 @@
+ /*import font from google*/
+ @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+ /* General Start */
+ html {
+     font-family: sans-serif; /* */
+ }
+ 
+ body {
+     width: 95%; /* set body width*/
+     
+     margin: 0 auto; /*set body margin, top and bottom marging to 0 and the left and right to auto. */
+     position: relative; /*Change the position of the body to relative, so we can move it. */
+     top: -20; /*change the top-position of the body to -20 , so it merge with bowser top margin.*/
+ }
+ /* General End */
+                    

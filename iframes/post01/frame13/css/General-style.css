@@ -1,0 +1,84 @@
+ /*import font from google*/
+ @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+ /* General Start */
+ html {
+     font-family: sans-serif; /* */
+ }
+ 
+ body {
+     width: 95%; /* set body width*/
+     
+     margin: 0 auto; /*set body margin, top and bottom marging to 0 and the left and right to auto. */
+     position: relative; /*Change the position of the body to relative, so we can move it. */
+     top: -20; /*change the top-position of the body to -20 , so it merge with bowser top margin.*/
+ }
+ /* General End */
+
+
+ /* Header Start */
+header {
+    background-color: coral; /* Change the background color to the coral color. */
+    text-align: center; /* Aling the <header> text on the conteiner center. */
+    height: 100px; /* Set the <header> height to 100px. */
+    position: relative; /* Change the position type to relative, so it can be moved. */
+    top: -20px; /* Move the <header> conteiner. */
+    padding-top: 5px; /* Add 5px worth of space between the content and the boder. */
+    border-radius: 10px; /* Round the border on 10px */
+}
+header h1 {
+    font-family: 'Great Vibes', cursive; /* Change the font type*/
+    font-size: 40px; /*Set the font-size */
+}
+/* Header End */
+
+
+
+/* Navegation menu Start */
+nav {
+    position: relative; /* change the position type so it can be moved. */
+    top: -60px; /* change the position of the nav tag. */
+    width: 50%; /* set the nav's width to be 50% of it's parent. */
+    margin: 0 auto; /* set the top and bottom margins to 0 and right and left to auto. */
+}
+                    
+nav ul {
+    list-style: none; /* Remove the default list style. */ 
+    display: flex; /* Change the display to flex. */ 
+    align-items: center; /* Align the <li>s on the center of the <ul> container. */ 
+    justify-content: space-evenly; /* Set space between the <li>s to be equally distributed. */
+}  
+
+nav ul li a { /* Here we going to make some changes to the anchor tag . */
+    text-decoration: none; /* Remove the link text decoration. */
+    color: black; /* Set the link color to black. */
+    font-size: 20px; /* Set the link’s text font-size to 20px. */
+    background-color: rgba(173, 44, 44, 0.3); /* Set the link background color. */
+    padding: 2px; /* Set 2 pixels of space between the link border and its content. */
+    border-radius: 5px; /* 5 pixels rounded border. */
+}
+
+nav ul li a:hover,
+nav ul li a:focus { /* Add some CSS when the link is hovered or focused. */
+    background-color: rgba(228, 4, 4, 1);  /* Change the background color. */
+    
+}
+
+
+nav ul li a:focus {  /* Add some CSS when the link is focused. */
+    outline: none; /* Remove the outlining. */
+}
+
+
+/* footer Start */
+footer {
+    background-color: coral; /* Change the background color. */
+    text-align: center; /* Aling the text to the center. */
+    height: 30px; /* Set the height. */
+    padding: 10px; /* Set the space between the border and footer content. */ 
+    font-size: 15px; /* Set the font size */
+    margin-top: 20px; /* Set the top margin. */
+    margin-bottom: 4px; /* Set the bottom margin. */
+    border-radius: 20px; /* Rounded the border corners.*/
+}
+/* footer End */

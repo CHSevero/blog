@@ -1,0 +1,98 @@
+/* fonts */
+/* Import fonts from google fonts.*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* fonts end */
+
+/* Posts */
+
+
+.section-posts h2 { /* Styling post section header. */
+    font-family: 'Great Vibes', cursive; /* Set the font family. */
+    font-size: 40px; /* Set the font size. */
+    text-align: center; /* Aling text to the center */
+    margin-bottom: 0px; /* Set margin bottom. */
+}
+
+.posts { /* Styling the post section. */
+    padding: 0 50px; /* Add some space between the content and the container border. */
+    border: 5px solid coral; /* Set a border. */
+    font-family: 'Roboto', sans-serif; /* Set the font-family. */
+    position: relative; /* Set position type to relative so it’s can be moved. */
+    border-radius: 20px; /* Rounded the borders’ corners. */
+}
+
+.posts .post { /* Styling the post div. */
+    text-align: justify; /* Justify text. */
+    text-justify: inter-word; /* Justify text by change the distance between words. */
+    border-bottom: 5px solid coral; /* Set a border at the div’s bottom. */
+    position: relative; /* Set the position type as relative. */
+}
+
+.posts .post:last-of-type { /* Styling the last post div. */
+    margin-bottom: 20px; /* Set bottom margin. */ 
+}
+
+.posts .post a { /* Styling the links. */
+    color: black; /* Set the link's color as black. */
+    font-size: 25px; /* Set the font size. */
+    
+}
+.posts .post a h3 { /* Styling the post’s div header. */
+    padding: 10px; /* Set a distance between the content and its container. */ 
+}
+
+.posts .post a h3:hover,
+.posts .post a h3:focus,
+.posts .post a h3:active { /* Styling the link when it’s hovered, focused, or active. */
+    background: coral; /* Set the background color. */ 
+}
+
+.tags { /* Styling the tags list. */
+    display: flex; /* Set the display as flex. */
+    flex-direction: row-reverse; /* Display tags in a row and in reverse order. */
+    flex-wrap: wrap; /**/
+  } 
+  
+.tags span { /* Styling each tag inside the tags' list. */
+    padding: 5px 10px; /* Set space between the content and its container. */
+    background: coral; /* Set background color.*/
+    margin-right: 5px; /* Add a margin right. */
+    margin-top: 5px; /* Add a margin top. */
+    border-radius: 15px; /* Rounded the borders’ corners. */
+}
+
+.older-newer { /* Styling the buttons paragraph. */
+    display: flex; /* Set the display to flex. */
+    flex-wrap: wrap; /**/
+    justify-content: space-between; /* Set the space between the buttons to be evenly distributed. */
+}
+
+.older-posts { /* Styling the older posts button. */
+    align-self: flex-start;   /* Display it a the container start. */
+}
+
+.older-posts::before { /* Styling the older posts button.*/
+    content: "<< "; /*Add "<< " before the bottun's content. */
+}
+
+.newer-posts { /* Styling the newer posts button. */
+    align-self: flex-end; /* Display it a the container's end. */
+    
+}
+
+.newer-posts::after { /* Styling the newer posts button.*/
+    content: " >>"; /* Add " >>" after the button's content.*/
+}
+
+.newer-posts,
+.older-posts { /* Styling buttons. */
+    background: coral; /* Set background color. */
+    font-size: 15px; /* Set font size.*/
+    padding: 5px; /* Set space between the border and its content. */
+    border-radius: 10px; /* Rounded borders. */
+    border-color: coral; /*Set border color. */
+    color: black; /* Set text color. */
+    font-weight: bold; /* Set font weight. */
+}
+
+/* Posts end */

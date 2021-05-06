@@ -1,0 +1,22 @@
+/* fonts */
+/* Import fonts from google fonts.*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* fonts end */
+
+/* Posts */
+
+
+.section-posts h2 { /* Styling post section header. */
+    font-family: 'Great Vibes', cursive; /* Set the font family. */
+    font-size: 40px; /* Set the font size. */
+    text-align: center; /* Aling text to the center */
+    margin-bottom: 0px; /* Set margin bottom. */
+}
+
+.posts { /* Styling the post section. */
+    padding: 0 50px; /* Add some space between the content and the container border. */
+    border: 5px solid coral; /* Set a border. */
+    font-family: 'Roboto', sans-serif; /* Set the font-family. */
+    position: relative; /* Set position type to relative so it’s can be moved. */
+    border-radius: 20px; /* Rounded the borders’ corners. */
+}
